@@ -1,7 +1,7 @@
 name: CI
 
 env:
-  IMAGE_NAME: wisanu-on-rails
+  IMAGE_NAME: ppond-on-rails
 
 on:
   push:
