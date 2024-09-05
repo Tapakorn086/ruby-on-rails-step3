@@ -13,3 +13,102 @@
  *= require_tree .
  *= require_self
  */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #D16BA5, #c23585);
+}
+.form {
+    background-color: white;
+    width: 35%;
+    height: 65%;
+    padding: 30px; 
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+}
+form.RegisterForm {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 500px;
+}
+
+h1 {
+    text-align: start;
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 15px;
+}
+
+.fullName,
+.birthDateAndGender,
+.EmailAndPhone {
+    display: flex;
+    justify-content: space-between;
+}
+
+section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+section input,
+section select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.firstName, 
+.lastName, 
+.birthDate, 
+.gender, 
+.email, 
+.phone, 
+.subject {
+    width: 48%;
+}
+
+.gender {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-gender {
+    display: flex;
+    align-items: center;
+}
+
+.sub-gender label {
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+.actions input[type="submit"] {
+    background-color: #4A90E2;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 20%;
+}
+
+.actions input[type="submit"]:hover {
+    background-color: #357ABD;
+}
