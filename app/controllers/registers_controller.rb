@@ -16,6 +16,11 @@ class RegistersController < ApplicationController
     end
   end
 
+  def destroy
+    @register = Register.find(params[:id])
+    @register.destroy
+  end
+
   def register_params
     params.require(:register).permit(:firstName, :lastName, :birthDate, :gender, :email, :phone, :selectSubject)
   end
