@@ -18,7 +18,11 @@ class RegistersController < ApplicationController
 
   def destroy
     @register = Register.find(params[:id])
-    @register.destroy
+    if @register.destroy
+      redirect_to root_path, notice: "Register was successfully destroyed."
+    else
+      redirect_to root_path, alert: "Failed to destroy register."
+    end
   end
 
   def register_params

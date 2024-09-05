@@ -23,13 +23,15 @@
             <%= form.date_field :birthDate %>
           </div>
         </section>
-        <section class="gender">
+        <section class="">
           <div class="field">
             <%= form.label :gender %>
-            <%= form.radio_button :gender, 'male' %>
-            <%= form.label :male, 'Male' %>
-            <%= form.radio_button :gender, 'female' %>
-            <%= form.label :female, 'Female' %>
+            <section class="sub-gender">
+              <%= form.radio_button :gender, 'male' %>
+              <%= form.label :male, 'Male' %>
+              <%= form.radio_button :gender, 'female' %>
+              <%= form.label :female, 'Female' %>
+            </section>
           </div>
         </section>
       </section>
