@@ -1,33 +1,61 @@
-<%= form_with model: @register, local: true do |form| %>
-  <div class="field">
-    <%= form.label :firstName %>
-    <%= form.text_field :firstName %>
-  </div>
-  <div class="field">
-    <%= form.label :lastName %>
-    <%= form.text_field :lastName %>
-  </div>
-  <div class="field">
-    <%= form.label :birthDate %>
-    <%= form.date_field :birthDate %>
-  </div>
-  <div class="field">
-    <%= form.label :gender %>
-    <%= form.text_field :gender %>
-  </div>
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.email_field :email %>
-  </div>
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.telephone_field :phone %>
-  </div>
-  <div class="field">
-    <%= form.label :selectSubject %>
-    <%= form.text_field :selectSubject %>
-  </div>
-  <div class="actions">
-    <%= form.submit "Register" %>
-  </div>
-<% end %>
+<div class=form>
+  <%= form_with model: @register, local: true do |form| %>
+    <div class="RegisterForm">
+      <h1>Registration Form</h1>
+      <section class="fullName">
+        <section class="firstName">
+          <div class="field">
+            <%= form.label :firstName %>
+            <%= form.text_field :firstName %>
+          </div>
+        </section>
+        <section class="lastName">
+          <div class="field">
+            <%= form.label :lastName %>
+            <%= form.text_field :lastName %>
+          </div>
+        </section>
+      </section>
+      <section class="birthDateAndGender">
+        <section class="birthDate">
+          <div class="field">
+            <%= form.label :birthDate %>
+            <%= form.date_field :birthDate %>
+          </div>
+        </section>
+        <section class="gender">
+          <div class="field">
+            <%= form.label :gender %>
+            <%= form.radio_button :gender, 'male' %>
+            <%= form.label :male, 'Male' %>
+            <%= form.radio_button :gender, 'female' %>
+            <%= form.label :female, 'Female' %>
+          </div>
+        </section>
+      </section>
+      <section class="EmailAndPhone">
+        <section class="email">
+          <div class="field">
+            <%= form.label :email %>
+            <%= form.email_field :email %>
+          </div>
+        </section>
+        <section class="phone">
+          <div class="field">
+            <%= form.label :phone %>
+            <%= form.telephone_field :phone %>
+          </div>
+        </section>
+      </section>
+      <section class="selectSubject">
+        <div class="field">
+          <%= form.label :selectSubject %>
+          <%= form.select :selectSubject, options_for_select([['Math', 'Math'], ['Science', 'Science'], ['English', 'English'], ['History', 'History']], selected: @register.selectSubject) %>
+        </div>
+      </section>
+      <div class="actions">
+        <%= form.submit "Register" %>
+      </div>
+    </div>
+  <% end %>
+</div>
