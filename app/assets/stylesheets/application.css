@@ -1,6 +1,4 @@
  * {
-     margin: 0;
-     padding: 0;
      box-sizing: border-box;
      font-family: Arial, sans-serif;
  }
@@ -15,8 +13,6 @@
 
  .form {
      background-color: white;
-     width: 35%;
-     height: 70%;
      padding: 30px;
      border-radius: 15px;
      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -28,7 +24,6 @@
      background-color: white;
      padding: 30px;
      border-radius: 15px;
-     width: 500px;
  }
 
  h1 {
@@ -71,19 +66,9 @@
      width: 48%;
  }
 
- .gender {
-     display: flex;
-     flex-direction: column;
- }
-
  .sub-gender {
      display: flex;
-     align-items: center;
- }
-
- .sub-gender label {
-     margin-left: 5px;
-     margin-right: 15px;
+     padding-top: 6px;
  }
 
  .actions input[type="submit"] {
@@ -103,6 +88,10 @@
  table {
      border-collapse: collapse;
      width: 100%;
+     margin-top: 20px;
+     border-radius: 5px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     overflow-x: auto;
  }
 
  th,

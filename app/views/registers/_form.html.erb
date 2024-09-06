@@ -4,56 +4,42 @@
       <h1>Registration Form</h1>
       <section class="fullName">
         <section class="firstName">
-          <div class="field">
-            <%= form.label :firstName %>
-            <%= form.text_field :firstName %>
-          </div>
+          <%= form.label :firstName %>
+          <%= form.text_field :firstName %>
         </section>
         <section class="lastName">
-          <div class="field">
-            <%= form.label :lastName %>
-            <%= form.text_field :lastName %>
-          </div>
+          <%= form.label :lastName %>
+          <%= form.text_field :lastName %>
         </section>
       </section>
       <section class="birthDateAndGender">
         <section class="birthDate">
-          <div class="field">
-            <%= form.label :birthDate %>
-            <%= form.date_field :birthDate %>
-          </div>
+          <%= form.label :birthDate %>
+          <%= form.date_field :birthDate %>
         </section>
-        <section class="">
-          <div class="field">
-            <%= form.label :gender %>
-            <section class="sub-gender">
-              <%= form.radio_button :gender, 'male' %>
-              <%= form.label :male, 'Male' %>
-              <%= form.radio_button :gender, 'female' %>
-              <%= form.label :female, 'Female' %>
-            </section>
-          </div>
+        <section class="gender">
+          <%= form.label :gender %>
+          <section class="sub-gender">
+            <%= form.radio_button :gender, 'male' %>
+            <%= form.label :male, 'Male' %>
+            <%= form.radio_button :gender, 'female' %>
+            <%= form.label :female, 'Female' %>
+          </section>
         </section>
       </section>
       <section class="EmailAndPhone">
         <section class="email">
-          <div class="field">
-            <%= form.label :email %>
-            <%= form.email_field :email %>
-          </div>
+          <%= form.label :email %>
+          <%= form.email_field :email %>
         </section>
         <section class="phone">
-          <div class="field">
-            <%= form.label :phone %>
-            <%= form.telephone_field :phone %>
-          </div>
+          <%= form.label :phone %>
+          <%= form.telephone_field :phone %>
         </section>
       </section>
       <section class="selectSubject">
-        <div class="field">
-          <%= form.label :selectSubject %>
-          <%= form.select :selectSubject, options_for_select([['Math', 'Math'], ['Science', 'Science'], ['English', 'English'], ['History', 'History']], selected: @register.selectSubject) %>
-        </div>
+        <%= form.label :selectSubject %>
+        <%= form.select :selectSubject, options_for_select([['Math', 'Math'], ['Science', 'Science'], ['English', 'English'], ['History', 'History']], selected: @register.selectSubject) %>
       </section>
       <div class="actions">
         <%= form.submit "Register" %>
