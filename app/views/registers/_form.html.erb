@@ -4,11 +4,11 @@
       <h1>Registration Form</h1>
       <section class="fullName">
         <section class="firstName">
-          <%= form.label :First Name %>
+          <%= form.label :firstName %>
           <%= form.text_field :firstName %>
         </section>
         <section class="lastName">
-          <%= form.label :Last Name %>
+          <%= form.label :lastName %>
           <%= form.text_field :lastName %>
         </section>
       </section>
@@ -20,25 +20,25 @@
         <section class="gender">
           <%= form.label :gender %>
           <section class="sub-gender">
-            <%= form.radio_button :gender, 'Male' %>
+            <%= form.radio_button :gender, 'male' %>
             <%= form.label :male, 'Male' %>
-            <%= form.radio_button :gender, 'Female' %>
+            <%= form.radio_button :gender, 'female' %>
             <%= form.label :female, 'Female' %>
           </section>
         </section>
       </section>
       <section class="EmailAndPhone">
         <section class="email">
-          <%= form.label :Email %>
+          <%= form.label :email %>
           <%= form.email_field :email %>
         </section>
         <section class="phone">
-          <%= form.label :Phone %>
+          <%= form.label :phone %>
           <%= form.telephone_field :phone %>
         </section>
       </section>
       <section class="selectSubject">
-        <%= form.label :Subject %>
+        <%= form.label :selectSubject %>
         <%= form.select :selectSubject, options_for_select([['Math', 'Math'], ['Science', 'Science'], ['English', 'English'], ['History', 'History']], selected: @register.selectSubject) %>
       </section>
       <div class="actions">
