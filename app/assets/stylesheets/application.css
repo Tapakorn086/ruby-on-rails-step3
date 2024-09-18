@@ -96,7 +96,7 @@
 
  th,
  td {
-    background-color: #88f4ce;
+     background-color: #88f4ce;
      text-align: left;
      padding: 8px;
  }
@@ -110,33 +110,34 @@
      color: rgb(0, 0, 0);
  }
 
-.btn {
-    display: inline-block;
-    padding: 10px 15px;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 3px; 
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
+ .btn {
+     display: inline-block;
+     padding: 10px 15px;
+     font-size: 14px;
+     font-weight: bold;
+     text-align: center;
+     text-decoration: none;
+     border-radius: 3px;
+     border: none;
+     cursor: pointer;
+     transition: background-color 0.3s, color 0.3s;
+ }
 
-.btn-register {
-    background-color: #2ecc71; 
-    color: rgb(0, 0, 0);
-}
-.btn-register:hover {
-    background-color: rgb(22, 149, 75); 
-}
+ .btn-register {
+     background-color: #2ecc71;
+     color: rgb(0, 0, 0);
+ }
+
+ .btn-register:hover {
+     background-color: rgb(22, 149, 75);
+ }
 
 
-.btn-danger {
-    background-color: #e74c3c; 
-    color: white;
-}
+ .btn-danger {
+     background-color: #e74c3c;
+     color: white;
+ }
 
-.btn-danger:hover {
-    background-color: #c0392b; 
-}
+ .btn-danger:hover {
+     background-color: #c0392b;
+ }
